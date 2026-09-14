@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joke API</title>
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>
+      <%= heading %>
+    </h1>
+
+    <% if (locals.joke) { %>
+
+      <!-- Edit Joke -->
+
+      <form id="editForm" method="post" action="/api/jokes/<%= joke.id %>">
+
+        <input
+          type="text"
+          name="content"
+          value="<%= joke.content %>"
+          required
+        >
+
+        <textarea
+          name="joke"
+          rows="5"
+          required
+        ><%= joke.joke %></textarea>
+
+        <input
+          type="text"
+          name="author"
+          value="<%= joke.author %>"
+          required
+        >
+
+        <button class="full-width" type="submit">
+          <%= submit %>
+        </button>
+
+      </form>
+
+    <% } else { %>
+
+      <!-- Create New Joke -->
+
+      <form id="newJokeForm" method="post" action="/api/jokes">
+
+        <input
+          type="text"
+          name="content"
+          placeholder="Joke setup"
+          required
+        >
+
+        <textarea
+          name="joke"
+          placeholder="Punchline"
+          rows="5"
+          required
+        ></textarea>
+
+        <input
+          type="text"
+          name="author"
+          placeholder="Your name"
+          required
+        >
+
+        <button class="full-width" type="submit">
+          <%= submit %>
+        </button>
+
+      </form>
+
+    <% } %>
+
+  </div>
+
+</body>
+
+</html>

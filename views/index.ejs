@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joke API</title>
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>😂 Joke API</h1>
+    <a id="newPostBtn" href="/new">Tell a Joke</a>
+    <ul id="postsList">
+      <% jokes.forEach(joke => { %>
+        <li>
+          <h2>
+            <%= joke.content %>
+          </h2>
+          <p>
+            😂 <%= joke.joke %>
+          </p>
+          <small>
+            By: <%= joke.author %>
+          </small>
+          <br><br>
+          <a class="edit" href="/edit/<%= joke.id %>">
+            Edit
+          </a>
+          <a class="delete" href="/api/jokes/delete/<%= joke.id %>">
+            Delete
+          </a>
+        </li>
+      <% }); %>
+    </ul>
+  </div>
+</body>
+</html>
