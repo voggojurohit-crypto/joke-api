@@ -1,7 +1,7 @@
 {
-  "name": "6.1-blog-api-project",
+  "name": "joke-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "A full-stack Joke API with RESTful CRUD operations using Node.js ,Express.js ,Axios And EJS",
   "main": "index.js",
   "type": "module",
   "scripts": {
