@@ -1,124 +1,80 @@
 # 😂 Joke API
 
-A full-stack **Joke API web application** built using **Node.js, Express.js, Axios, EJS, HTML, and CSS**.
+A full-stack Joke API web application built using **Node.js, Express.js, Axios, HTML, CSS, and EJS**.
 
-This project demonstrates how to build, consume, and deploy a **RESTful API** with complete **CRUD (Create, Read, Update, Delete)** functionality.
-
-Users can view jokes, create new jokes, edit existing jokes, and delete jokes through a simple and user-friendly web interface.
-
-The project consists of a separate **REST API backend** and **frontend web server**, both deployed using **Render**.
-
----
+This project demonstrates how to build, consume, and deploy a RESTful API with complete CRUD functionality. Users can view jokes, create new jokes, edit existing jokes, and delete jokes through a simple web interface.
 
 ## 🚀 Live Demo
 
-### 🌐 Live Website
-
+🌐 **Website:**  
 https://joke-api-website.onrender.com
 
-### 🔗 Live REST API
-
+🔗 **Joke API:**  
 https://joke-api-6jkc.onrender.com/jokes
 
-### 💻 GitHub Repository
+## 📌 Features
 
-https://github.com/voggojurohit-crypto/joke-api
+- View all jokes
+- Create new jokes
+- Edit existing jokes
+- Delete jokes
+- REST API integration
+- Dynamic web pages using EJS
+- HTTP requests using Axios
+- Express.js server
+- JSON request and response handling
+- Responsive frontend styling
+- Deployed using Render
 
----
+## 🛠️ Technologies Used
 
-## 📌 Project Overview
+### Backend
+- Node.js
+- Express.js
+- Axios
+- Body Parser
 
-The **Joke API** is a web application that allows users to manage a collection of jokes.
+### Frontend
+- HTML5
+- CSS3
+- EJS
 
-Each joke contains:
+### API
+- REST API
+- JSON
+- CRUD operations
+- HTTP methods: GET, POST, PUT/PATCH, DELETE
 
-- 🆔 Joke ID
-- 📝 Joke setup/content
-- 😂 Punchline
-- 👤 Author
+### Deployment
+- Render
 
-The project consists of two Express.js servers.
+### Version Control
+- Git
+- GitHub
 
-### 1. Backend REST API
+## 🔄 REST API Operations
 
-The backend:
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/jokes` | Get all jokes |
+| GET | `/jokes/:id` | Get a specific joke |
+| POST | `/jokes` | Create a new joke |
+| PUT/PATCH | `/jokes/:id` | Update an existing joke |
+| DELETE | `/jokes/:id` | Delete a joke |
 
-- Stores the jokes
-- Provides REST API endpoints
-- Handles CRUD operations
-- Processes requests and responses
-
-### 2. Frontend Web Server
-
-The frontend:
-
-- Provides the user interface
-- Displays jokes dynamically
-- Uses Axios to communicate with the backend API
-- Uses EJS for dynamic HTML rendering
-- Provides forms for creating and editing jokes
-
----
-
-# ✨ Features
-
-- 😂 View all jokes
-- 🔍 View a single joke by ID
-- ➕ Create a new joke
-- ✏️ Edit an existing joke
-- 🗑️ Delete a joke
-- 👤 Add an author to every joke
-- 🔄 Complete CRUD functionality
-- 🌐 RESTful API architecture
-- 🔗 Frontend-backend communication using Axios
-- 📄 Dynamic content rendering using EJS
-- 📱 Simple responsive web interface
-- 🚀 Deployed on Render
-- 💻 Source code available on GitHub
-
----
-
-# 🛠️ Technologies Used
-
-| Technology / Tool | Purpose |
-|---|---|
-| JavaScript | Main programming language |
-| Node.js | JavaScript runtime |
-| Express.js | Backend and server development |
-| Axios | API communication |
-| EJS | Dynamic HTML rendering |
-| HTML5 | Web page structure |
-| CSS3 | Styling and layout |
-| Body Parser | Processing request data |
-| Git | Version control |
-| GitHub | Source code hosting |
-| Visual Studio Code | Development environment |
-| Render | Application deployment |
-
----
-
-# 🏗️ Project Architecture
-
-The application follows a simple **frontend-backend architecture**.
+## 📂 Project Structure
 
 ```text
-                         USER
-                           |
-                           v
-                +----------------------+
-                |    Frontend Server   |
-                |      Express + EJS   |
-                |       server.js      |
-                +----------------------+
-                           |
-                         Axios
-                           |
-                           v
-                +----------------------+
-                |      REST API        |
-                |   Express + Node.js  |
-                |       index.js       |
-                +----------------------+
-                           |
-                           v
-                  In-Memory Joke Data
+joke-api/
+│
+├── public/
+│   └── styles/
+│
+├── views/
+│
+├── index.js
+├── server.js
+├── package.json
+├── package-lock.json
+├── .gitignore
+└── README.md
